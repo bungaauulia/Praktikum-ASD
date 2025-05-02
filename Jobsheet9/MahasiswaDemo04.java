@@ -40,6 +40,8 @@ public class MahasiswaDemo04 {
                         int nilai = scan.nextInt();
                         dinilai.tugasDinilai(nilai);
                         System.out.printf("Nilai Tugas %s adalah %d\n", dinilai.nama, nilai);
+                        String biner = stack.konversiDesimalKeBiner(nilai);
+                        System.out.println("Nilai Biner Tugas: " + biner);
                     }
                     break;
                 case 3:
@@ -53,7 +55,7 @@ public class MahasiswaDemo04 {
                     System.out.println("Nama\tNIM\tKelas");
                     stack.print();
                     break;
-                case 5:
+                    case 5:
                     Mahasiswa04 bawah = stack.terbawah();
                     if (bawah != null) {
                         System.out.println("Tugas pertama dikumpulkan oleh " + bawah.nama);
@@ -62,10 +64,9 @@ public class MahasiswaDemo04 {
                 case 6:
                     System.out.println("Total tugas yang sudah terkumpul: " + stack.jmlTugas());
                     break;
-
                 default:
                     System.out.println("Pilihan tidak valid.");
             }
-        } while (pilih >= 1 && pilih <= 6);
+        } while (pilih >= 1 && pilih <= 4);
     }
 }
